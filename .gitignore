@@ -1,0 +1,5 @@
+/*.db
+faces/*
+migrate.sql
+__pycache__
+tmp/*

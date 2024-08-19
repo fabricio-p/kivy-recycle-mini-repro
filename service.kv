@@ -1,0 +1,14 @@
+#:kivy 1.0
+#:import CardTransition kivy.uix.screenmanager.CardTransition
+
+<AppView>:
+  rows: 1
+  orientation: "lr-tb"
+  -size_hint: 1, 1
+  background_color: app.color.bg.normal.prim
+  # spacing: dp(10)
+  tab_manager: tab_manager
+
+  ScreenManager:
+    id: tab_manager
+    transition: CardTransition(mode="push", direction="down", duration=0.15)
