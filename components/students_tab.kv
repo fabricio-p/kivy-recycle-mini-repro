@@ -87,30 +87,33 @@
   height: self.minimum_height
 
   MGridLayout:
-    size_hint: 1/4, 1
-    rows: 1
     orientation: "lr-tb"
+    rows: 1
+    size_hint: 1/4, None
+    height: self.minimum_height
     padding: dp(5), 0
     spacing: dp(5)
 
     BoxButton:
       orientation: "horizontal"
-      size_hint: 1, 1
+      size_hint: 1, None
+      height: self.minimum_height
       background_color: app.color.bg.edit.sec
       pos_hint: {"center_x": 0.5, "center_y": 0.5}
       Icon:
-        size_hint: 1, 1
+        size_hint: 1, None
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         name: "pen-to-square"
         size: 20, 20
 
     BoxButton:
       orientation: "horizontal"
-      size_hint: 1, 1
+      size_hint: 1, None
+      height: self.minimum_height
       background_color: app.color.bg.destroy.sec
       pos_hint: {"center_x": 0.5, "center_y": 0.5}
       Icon:
-        size_hint: 1, 1
+        size_hint: 1, None
         name: "trash"
         pos_hint: {"center_x": 0.5, "center_y": 0.5}
         size: 18, 20
@@ -138,6 +141,7 @@
   height: self.minimum_height
   MLabel:
     size_hint: 1, None
+    height: self.texture_size[1]
     font_size: dp(20)
     halign: "center"
     bold: True
@@ -148,6 +152,7 @@
   link: False
   n: 1
   size_hint: 1/self.n, None
+  height: self.minimum_height
   border_color: app.color.all.black
   rows: 1
   orientation: "lr-tb"
